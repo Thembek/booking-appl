@@ -1,7 +1,9 @@
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+
+const iconColor ="#76d7ea";
 
 const Header = () => {
     return (
@@ -24,7 +26,7 @@ const Header = () => {
                     padding: 8,
                 }}
             >
-                <Ionicons name="bed-outline" size={24} color="#76d7ea" />
+                <Ionicons name="bed-outline" size={24} color={iconColor} />
                 <Text
                     style={{
                         marginLeft: 8,
@@ -43,7 +45,55 @@ const Header = () => {
                     alignItems: 'center',
                 }}
             >
-                <Ion
+                <Ionicons name="ios-airplane-outline" size={26} color={iconColor} />
+                <Text
+                    style={{
+                        marginLeft: 8,
+                        fontWeight: "bold",
+                        color: 'white',
+                        fontSize: 15,
+                    }}
+                >
+                    FLIGHTS
+                </Text>
+            </Pressable>
+
+            <Pressable
+                style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}
+            >
+                <Ionicons name="car-outline" size={26} color={iconColor} />
+                <Text
+                    style={{
+                        marginLeft: 8,
+                        fontWeight: "bold",
+                        color: 'white',
+                        fontSize: 15,
+                    }}
+                >
+                    CAR RENTAL
+                </Text>
+            </Pressable>
+
+            <Pressable
+                style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}
+            >
+                <FontAwesome5 name="uber" size={26} color={iconColor} />
+                <Text
+                    style={{
+                        marginLeft: 8,
+                        fontWeight: 'bold',
+                        color: 'white',
+                        fontSize: 15,
+                    }}
+                >
+                    TAXI
+                </Text>
             </Pressable>
         </View>
     );
