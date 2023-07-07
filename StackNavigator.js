@@ -34,6 +34,7 @@ const StackNavigator = () => {
     return(
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen name="main" component={BottomTabs} option={{ headerShown: false }} />
                 <Stack.Screen name="login" component={LoginScreen} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
