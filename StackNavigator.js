@@ -24,7 +24,7 @@ const StackNavigator = () => {
                             headerShown: false,
                             tabBarIcon: ({ focused }) => focused
                                 ? (<Entypo name="home" size={24} color="#003580" />) 
-                                : (<AntDesign name="home" size={24} color="black" />) ,
+                                : (<AntDesign name="home" size={24} color="#000" />) ,
                         }}
                 />
             </Tab.Navigator>
