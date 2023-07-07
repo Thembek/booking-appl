@@ -6,7 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import LoginScreen from './screens/LoginScreens';
+import LoginScreen from './screens/LoginScreen';
+import HomeScreen from './screens/HomeScreen';
 
 const StackNavigator = () => {
     const Tab = createBottomTabNavigator();
@@ -17,11 +18,26 @@ const StackNavigator = () => {
             <Tab.Navigator>
                 <Tab.Screen 
                         name="Home"
-                        component={HomeScree}
+                        component={HomeScreen}
+                        options={{
+                            tabBarLebel: 'Home',
+                            headerShown: false,
+                            tabBarIcon: ({ focused }) => focused
+                                ? (<Entypo name="home" size={24} color="#003580" />) 
+                                : (<AntDesign name="home" size={24} color="black" />) ,
+                        }}
                 />
             </Tab.Navigator>
         );
     }
+    
+    return(
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="login" component={LoginScreen} options={{ headerShown: false }} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 };
 
 export default StackNavigator;
